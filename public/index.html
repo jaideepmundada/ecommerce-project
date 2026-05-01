@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#121212">
+    <title>PayCompare App</title>
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Fonts and Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <!-- Top App Bar -->
+    <header class="app-header">
+        <div class="logo-container">
+            <i class="fa-solid fa-wallet"></i>
+            <h1>PayCompare</h1>
+        </div>
+        <button id="whatsapp-share" class="icon-btn" aria-label="Share on WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </button>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="app-content">
+        <div class="card glass-card">
+            <h2>Payment Options Breakdown</h2>
+            <p class="subtitle">Compare fees, speed, and availability.</p>
+            <div class="chart-container">
+                <canvas id="chart"></canvas>
+            </div>
+        </div>
+        
+        <div class="card glass-card actions-card">
+            <h3>Found this useful?</h3>
+            <p>Share this comparison tool with your friends or colleagues.</p>
+            <button id="whatsapp-share-large" class="primary-btn whatsapp-btn">
+                <i class="fa-brands fa-whatsapp"></i> Share via WhatsApp
+            </button>
+        </div>
+    </main>
+
+    <!-- Bottom Navigation Bar (App-like feel) -->
+    <nav class="bottom-nav">
+        <a href="#" class="nav-item active">
+            <i class="fa-solid fa-chart-simple"></i>
+            <span>Compare</span>
+        </a>
+        <a href="#" class="nav-item">
+            <i class="fa-solid fa-clock-rotate-left"></i>
+            <span>History</span>
+        </a>
+        <a href="#" class="nav-item">
+            <i class="fa-solid fa-gear"></i>
+            <span>Settings</span>
+        </a>
+    </nav>
+
+    <script src="script.js"></script>
+    <script>
+        // Basic Service Worker Registration for PWA
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(registration => console.log('SW registered'))
+                    .catch(err => console.log('SW registration failed'));
+            });
+        }
+    </script>
+</body>
+</html>
