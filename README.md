@@ -1,4 +1,4 @@
-#💳PayCompare (E-commerce Project)
+#PayCompare (E-commerce Project)
 
 ##Overview:-
 An ecommerce payment comparison tool is basically a system (website, dashboard, or app) that helps businesses compare different payment gateways (like Stripe, Razorpay, PayPal, Paytm, etc.) and choose the best one based on their needs.
