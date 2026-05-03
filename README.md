@@ -1,8 +1,14 @@
-# PayCompare (E-commerce Project)
+#💳PayCompare (E-commerce Project)
 
-A sleek, responsive Payment Comparison Tool built with Node.js, Express, and Chart.js.
+##Overview
+An ecommerce payment comparison tool is basically a system (website, dashboard, or app) that helps businesses compare different payment gateways (like Stripe, Razorpay, PayPal, Paytm, etc.) and choose the best one based on their needs.
 
-## Features
+##🎯Target users
+Small business owners
+Startups launching ecommerce
+Developers choosing payment APIs
+
+##🔑Features
 - **Payment Options Breakdown**: Compare different payment methods based on fees, speed, and availability.
 - **Interactive Data Visualization**: Data is rendered beautifully using Chart.js.
 - **PWA Support**: Built to be a Progressive Web App (PWA) with offline caching using Service Workers.
